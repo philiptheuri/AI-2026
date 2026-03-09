@@ -26,7 +26,9 @@
 #print(x+y)
 #print(f"The result is {x+y}")
 #This illustrates that you can run functions on functions. The inner function, input(), is run first
-#and then the outer one is run, int().
+#and then the outer one is run, int().This is called nesting functions. You can put one function
+#call, that is the use of a function, inside the use of another function so that the return value of the
+#inner function becomes the argument or the input to the outer function.
 
 #Float Basics
 #x = float(input("What's x? "))
@@ -88,17 +90,58 @@
 #We could use an f-string to format the output as follows.
 
 #Get the user's input
-x = float(input("What's x? "))
-y = float(input("What's y? "))
+#x = float(input("What's x? "))
+#y = float(input("What's y? "))
 
 #Calculate the result
-z = x / y
+#z = x / y
 
-#Print the result. This cryptic f-string code displays as our prior rounding strategy. 
-print(f"{z:.2f}")
+#Print the result without round function. This cryptic f-string code displays as our prior rounding
+# strategy.This is going round off to 2 decimal places. We can change that by changing the 2 to 3
+# or 4 etc.
+#print(f"{z:.2f}")
 
+#Returning values
+#You can imagine many scenarios where you don't just want a function to perform an action but also
+#to return a value back to the main function. For example, rather than simply printing the calculation
+#x+y, you may want a function to return the value of this calculation back to another part of your
+#program. This "passing back" of a value, we call a return value.
 
+#def main():
+#    x = int(input("What's x? "))
+#    print("x squared is",square(x))
 
+#Define the square function
+#def square(n):
+#    return n * n
 
+#main()
+
+#We return n squared back to the print function in the main function.
+#We can solve this problem of squaring in many more ways. Let's see two ways.
+
+#First, use two stars or asterisks to raise the thing on the left to the power on the right.
+
+#def main():
+#    x = int(input("What's x? "))
+#    print("x squared is,",square(x))
+
+#Using double stars
+#def square(n):
+#    return n**2
+
+#main()
+
+#Secondly, using the pow function
+
+def main():
+    x = int(input("What's x? "))
+    print ("x squared is,",square(x))
+
+#Using pow function
+def square(n):
+    return pow(n,2)
+
+main()
 
 
