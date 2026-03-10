@@ -15,7 +15,7 @@
 
 #Creating our own function that says hello, or anything that you define in the function. 
 #Notice that everything under def hello is indented. Python is an indented language. It uses
-#indentation to understand what is part of the above function. Therefore everything in the hello()
+#indentation to understand what is part of the above function. Therefore everything in the hello
 #function must be indented. When something is not indented, it treats it as if it is not inside the
 #hello function.
 #def hello():
@@ -41,7 +41,7 @@
 #hello(name)
 
 #The "name" variable is passed as an argument/input to the hello function.Even though the variable
-#is called "name" here, when the function itself is called, the computer assumes that the sama value
+#is called "name" here, when the function itself is called, the computer assumes that the same value
 #is now called "to". So name is essentially copied to another variable called "to", so that in the
 #context of hello I can say hello "to" that variable instead.
 
@@ -84,7 +84,7 @@
 #Name is being passed from the main function to the hello function and once it's passed it is 
 #called "to" which is fine because it's completely up to each individual function to name its own
 #variables or name its own arguments. This is a way now I'm handing to the hello function the value
-#the value of that variable so it can be printed by hello as well. 
+#of that variable so it can be printed by hello as well. 
 
 def main():
     #Output using our own function
@@ -100,7 +100,7 @@ def hello(to = "world"):
 
 main()
 
-#Scope refers to a variable only existingi in the context in which you defined it. So if you define a
+#Scope refers to a variable only existing in the context in which you defined it. So if you define a
 #variable, name for example, in the main function only, then I can only use it in the main function
 #and not the hello function, it doesn't exist in that so-called scope. 
 
