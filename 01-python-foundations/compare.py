@@ -1,6 +1,7 @@
 #Conditionals: if Statements
 #if statements use bool (Boolean) values (True or False) to decide whether or not to execute code. If
-#the comparison x > y is True , the interpreter runs the indented block.
+#the comparison x < y is True , the interpreter runs the indented block. x > y is a boolean expression.
+#A question that has a yes or no answer or a true or false answer. Only 2 possibilities.
 
 #x = int(input("What's x? "))
 #y = int(input("What's y? "))
