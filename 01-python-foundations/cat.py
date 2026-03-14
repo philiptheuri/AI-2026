@@ -70,8 +70,9 @@
 
 #Improving with user input.
 #Perhaps we want input from a user. We can use loops as a way of validating the input of the user.
-#A common paradigm in Python is to use a while loop to validate the input of the user. For example, let's try prompting the user for a number
-#greater than or equal to 0.
+#A common paradigm in Python is to use a while loop to validate the input of the user. For example, let's try prompting the user for a 
+#number greater than or equal to 0.
+#Starting with the "while True:" statement immediately induces an infinite loop.
 
 #while True:
 #    n = int(input("What's n? "))
