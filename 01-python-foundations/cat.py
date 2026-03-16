@@ -72,7 +72,7 @@
 #Perhaps we want input from a user. We can use loops as a way of validating the input of the user.
 #A common paradigm in Python is to use a while loop to validate the input of the user. For example, let's try prompting the user for a 
 #number greater than or equal to 0.
-#Starting with the "while True:" statement immediately induces an infinite loop.
+#Starting with the "while True:" statement immediately induces an infinite loop (a loop that goes on forever).
 
 #while True:
 #    n = int(input("What's n? "))
@@ -98,17 +98,20 @@
 
 #We can use functions to further improve our code.
 
-def main():
-    meow(get_number())
+#def main():
+#    meow(get_number())
 
-def get_number():
-    while True:
-        n = int(input("What's n? "))
-        if n > 0:
-            return n
+#def get_number():
+#    while True:
+#        n = int(input("What's n? "))
+#        if n > 0:
+#            return n
         
-def meow(n):
-    for _ in range(n):
-        print("meow")
+#def meow(n):
+#    for _ in range(n):
+#        print("meow")
 
-main()
+#main()
+
+#Notice how not only did we change our code to operate in multiple functions, but we also used a return statement to return a
+#value of n back to the main faunction. The return statement can be inside the loop or outside of the loop but within the function.
