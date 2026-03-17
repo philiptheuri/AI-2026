@@ -83,7 +83,7 @@
 
 #continue explicitly tells Python to go to the next iteration of a loop.
 #break tells Python to "break out" of loop early before it has finished all of its iterations. In this case we'll continue to the next
-#iteration of the loop when n is less than 0- ultimately reprompting the user with "What's n?". If though, n is greater than or equal
+#iteration of the loop when n is less than 0 - ultimately reprompting the user with "What's n?". If though, n is greater than or equal
 # 0, we'll break out of the loop and allow the rest of our program to run.
 #It turns out that continue is redundant in this code. We can improve this program as follows:
 

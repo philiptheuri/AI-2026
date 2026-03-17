@@ -1,3 +1,4 @@
+#Creating a list
 #students = ["Hermoine","Harry","Ron"]
 
 #How to print the list manually, one item at a time.
@@ -46,7 +47,8 @@
 #print(students["Ron"])
 #print(students["Draco"])
 
-#We use curly braces when creating a dict. Where lists use numbers to iterate through the list, dicts allow us to use words.
+#We use curly braces when creating a dict. Where lists use numbers to iterate through the list, dicts allow us to use words. In this
+#example, "Hermoine" is the key and "Griffyndor" is the value.
 #We can improve our code as follows:
 
 #students = {
@@ -58,8 +60,9 @@
 #for student in students:
 #    print(student)
 
-#Executing this code, the for loop will only iterate through all the keys, resulting in a list of the names of the students. How could
-#we print out both values and keys? We modify our code as follows:
+#Executing this code, the for loop will only iterate through all the keys, resulting in a list of the names of the students. When
+# you use a for loop in Python to iterate over a dictionary, by design, it iterates over all of the keys.
+#How could we print out both values and keys? We modify our code as follows:
 
 #students = {
 #    "Hermoine": "Griffyndor",
@@ -70,8 +73,10 @@
 #for student in students:
 #    print(student, students[student])
 
-#Notice how students[student] will go to each students key and find the value of their house. The output is a bit messy and we can add
-#the separator argument, sep = ",", to the print function to create a clean separation of a , between each item printed.
+#Notice how students[student] will go to each students key and find the value of their house. If the students name is the key, then
+#this syntax, students[student] will go to Hermoines location and get back her house
+#The output is a bit messy and we can addthe separator argument, sep = ",", to the print function to create a clean separation
+#of a , between each item printed.
 
 #students = {
 #    "Hermoine": "Griffyndor",
@@ -84,7 +89,8 @@
 #    print(student, students[student], sep=",")
 
 #What if we have more information about our students? How could we associate more data with the students?
-#Imagine wanting to have lots of data associated with multiple keys
+#Imagine wanting to have lots of data associated with multiple keys. The keys in this example are name, house and patronus and the values
+#or definitions are the data associated with the keys e.g. Hermoine, Griffyndor and Otter.
 
 students = [
     {"name": "Hermoine", "house": "Griffyndor", "patronus": "Otter"},
@@ -97,6 +103,6 @@ students = [
 #Now we have access to a whole host of interesting data about these students and we can add the following code.
 
 for student in students:
-    print(student["name"], student["house"], student["patronus"], sep=",")
+    print(student["name"], student["house"], student["patronus"], sep=", ")
 
 #Notice how the for loop will iterate through each of the dicts inside the list called students.
