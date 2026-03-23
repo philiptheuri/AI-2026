@@ -26,7 +26,7 @@
 #numbers = [0,1,2,3,5,4,6]
 
 #Prints number 3 which is the fourth element
-#print(numbers[6])
+#print(numbers[4])
 
 #Counting characters including spaces, can be used in a str or a list.
 #print(len(numbers))
@@ -104,11 +104,50 @@
 #print(count)
 
 #Practice test 4
-text = "hello world!!!"
-result = ""
+#text = "hello world!!!"
+#result = ""
 
-for char in text:
-    if char != " " and char != "!":
-        result += char
+#for char in text:
+#    #if CHAR is not inside this list. Only count real characters, not spaces.
+#    if char not in [" ", "!"]:
+#        result += char
 
-print(result)
+#print(result)
+
+#The strip() method removes spaces from the beginning and the end (edges only) but the spaces on the inside remain.
+#text = "   Hello World   "
+#print(text.strip())
+
+#The lower() method (Normalize case) converts everything to lowercase
+#print(text.strip().lower())
+
+#The replace() method replaces one thing with another
+#print(text.strip().lower().replace(" ", "..."))
+
+#Use replace() to remove characters as well
+#print(text.replace("H", ""))
+
+#Note that strings do not change automatically. To change the string to all uppercase we do this:
+#text = text.upper()
+#print(text)
+
+#Chaining methods
+#pattern = "  clean split transform join  "
+#cleaned = pattern.strip().lower().replace(" ", ">")
+#print(cleaned)
+
+#Build a cleaner function
+def main():
+    text = input("Put a string with numbers and letters: ")
+    clean = cleaned_text(text)
+    print(clean)
+
+def cleaned_text(text):
+    text = text.strip()
+    text = text.lower()
+    text = text.replace("!, @, &, $", "")
+    return text
+
+
+if __name__ == "__main__":
+    main()
