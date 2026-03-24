@@ -47,7 +47,7 @@
 
 #for char in text:
 #    reversed_text = char + reversed_text
-#    print(reversed_text)
+#print(reversed_text)
 
 #Count characters without len
 #text = "I am going to master Strings"
@@ -137,17 +137,67 @@
 #print(cleaned)
 
 #Build a cleaner function
-def main():
-    text = input("Put a string with numbers and letters: ")
-    clean = cleaned_text(text)
-    print(clean)
+#def main():
+#    text = input("Put a string with numbers and letters: ")
+#    clean = cleaned_text(text)
+#    print(clean)
 
-def cleaned_text(text):
-    text = text.strip()
-    text = text.lower()
-    text = text.replace("!, @, &, $", "")
-    return text
+#def cleaned_text(t): #The parameter for the funtion definition doesn't have to be named like the parameter in the main hence t and text
+#    t = t.strip()
+#    t = t.lower()
+#    t = t.replace("!", "").replace("@", "").replace("&", "").replace("$", "")
+#    return t
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
+
+#Day 3 str practice
+
+#split() turns a str into a list which is a variable type in Python. split() removes spaces and separates words
+
+#text = "I am going to split this str into a list of words"
+#words = text.split() #text is split into a list
+#print(words)
+
+#" ".join() joins a list into a str. Key insight: " " the space is what goes between words. It can also be "...".join
+#combined = " ".join(words)
+#print(combined)
+#new_combined = "...".join(words)
+#print(new_combined)
+
+#Example to fix messy spaces
+#text = "God    is good, all     the time!"
+#the_word = text.split()
+#clean = " ".join(the_word)
+#print(clean)
+
+#Day 3 practice exercises
+#split words, join words
+text = "I love Python"
+separated = text.split()
+combined = "...".join(separated)
+print (separated)
+print(combined)
+
+#Fix messy spaces
+new_text = "hello    world    again"
+new_separated = new_text.split()
+clean_text = " ".join(new_separated)
+print(clean_text)
+
+#Count words
+words = "I love data science"
+new_words = words.split()
+count = 0
+for char in new_words:
+    if char != " ":
+        count += 1
+print(count)
+
+#Reverse word order
+motto = "I love Python"
+new_motto = motto.split()
+new_motto.reverse() #use reverse to reverse a list. Turn a str to a list then reverse it.
+clean_motto = " ".join(new_motto)
+print(clean_motto)
