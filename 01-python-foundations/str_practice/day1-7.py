@@ -174,30 +174,230 @@
 
 #Day 3 practice exercises
 #split words, join words
-text = "I love Python"
-separated = text.split()
-combined = "...".join(separated)
-print (separated)
-print(combined)
+#text = "I love Python"
+#separated = text.split()
+#combined = "...".join(separated)
+#print (separated)
+#print(combined)
 
 #Fix messy spaces
-new_text = "hello    world    again"
-new_separated = new_text.split()
-clean_text = " ".join(new_separated)
-print(clean_text)
+#new_text = "hello    world    again"
+#new_separated = new_text.split()
+#clean_text = " ".join(new_separated)
+#print(clean_text)
 
 #Count words
-words = "I love data science"
-new_words = words.split()
-count = 0
-for char in new_words:
-    if char != " ":
-        count += 1
-print(count)
+#words = "I love data science"
+#new_words = words.split()
+#count = 0
+#for char in new_words:
+#    if char != " ":
+#        count += 1
+#print(count)
 
 #Reverse word order
-motto = "I love Python"
-new_motto = motto.split()
-new_motto.reverse() #use reverse to reverse a list. Turn a str to a list then reverse it.
-clean_motto = " ".join(new_motto)
-print(clean_motto)
+#motto = "I love Python"
+#new_motto = motto.split()
+#new_motto.reverse() #use reverse to reverse a list. Turn a str to a list then reverse it.
+#clean_motto = " ".join(new_motto)
+#print(clean_motto)
+
+
+#Day 4 - Searching and Conditions
+
+#"in" checks if something exists inside a str. Output is bool (True or False). Is this inside that?
+#text = "hello world"
+#print("hello" in text)
+#print("world" in text)
+#print("Hi" in text)
+
+#Using "if" with "in"
+#if "hello" in text:
+#    print("Greeting detected")
+
+#Case Problem. If we use "hello" instead of "Hello" in the "if" statement, the output will be nothing. We fix this using the lower()
+#method. text is first converted to lower case and then the condition evaluates to True. If you normalize compare using the same format.
+#text = "Hello World"
+#if "hello" in text.lower():
+#    print("Yes")
+
+#Multiple conditions
+#text = "hello world"
+#if "hello" in text and "world" in text:
+#    print("Both found")
+
+#if "hello" in text or "hi" in text:
+#    print("Greetings detected")
+
+#startswith() and endswith() - used in detecting emails, filtering data, validating input, building smart systems
+#print(text.startswith("hello"))
+#print(text.endswith("world"))
+#learn how to use startwith() and endswith() with conditionals as well as other ways to use the two methods
+
+#Day 4 practice
+#text = "I love Python"
+#if "Python" in text:
+#    print("Yes")
+
+#if "python" in text.lower():
+#    print("Yes")
+
+#text = input("Say something: ")
+#if "hi" in text or "hello" in text:
+#    print("Greetings detected")
+#else:
+#    print("No greetings detected")
+
+#text = input("Enter email: ")
+#if "@" in text:
+#    print("Valid")
+#else:
+#    print("Invalid")
+
+#filename = "photo.jpg"
+#if filename.endswith(".jpg"):
+#    print("Image file")
+
+
+#mini project: smart response system
+#def main():
+#    user_input = input("You: ")
+#    print(respond(user_input))
+
+#def respond(text):
+#    text = text.lower()
+#    if "hello" in text or "hi" in text:
+#        return "Hello there!"
+#    elif "bye" in text:
+#        return "Goodbye!"
+#    elif "how are you" in text:
+#        return "I am fine"
+#    elif "thanks" in text:
+#        return "You're welcome"
+#    elif "help" in text:
+#        return "How can I assist?"
+#    else:
+#        return "I don't understand"
+    
+#if __name__ == "__main__":
+#    main()
+
+#Case normalization
+#text = input("Write something: ").upper()
+#if "hello" in text:
+#    print("Hello there")
+
+#if "HELLO" in text:
+#    print("HELLO THERE")
+
+
+#Day 5 Patterns and smarter logic
+#So far we have been asking, is this word in text? Now we ask, how many? what type? what pattern?
+#Part 1: Using lists for pattern detection
+#Instead of writing if "hey" in text or if "hello" in text: we use a list to group patterns
+
+#text = input("Say something: ").lower()
+#greetings = ["hello", "hi", "hey", "waddupp"]
+#for word in greetings:
+#    if word in text:
+#        print("Greetings detected")
+#        break #this is a control flow mechanism. Think "stop searching once you find it"
+
+#Part 3: Detecting numbers using .isdigit() -returns True if character is a number.
+#text = "abc123"
+#for char in text:
+#    if char.isdigit():
+#        print("Number found")
+#        break
+
+#Part 4: Counting patterns -we don't just detect, we measure.
+#text = "abc12345xyz"
+#count = 0
+
+#for char in text:
+#    if char.isdigit():
+#        count += 1
+#print(count)
+
+#Part 5: Flags - Sometimes we need to track, did we find x? did we find y? An example of a flag is: has_letter = False. A flag that
+#changes when a condition is met.
+
+#text = input("Enter password: ")
+#has_letter = False #flag
+#has_number = False #flag
+
+#for char in text:
+#    if char.isalpha(): #.isalpha return True if all characters in the str are alphabetic and there is atleast 1 character, False otherwise
+#        has_letter = True
+#    if char.isdigit(): #.isdigit return True if all characters in the str are digits and there is at least on character, False otherwise
+#        has_number = True
+
+#if has_letter and has_number: #combining conditions for multiple checks. Only True if both are True
+#    print("Strong Password")
+#else:
+#    print("Weak Password")
+
+#This works because you scan the text, update the flags and decide at the end.
+
+#Day 5 practice
+#text = input("Say something: ").lower()
+#greetings = ["hi", "hello", "hola"]
+#for word in greetings:
+#    if word in text:
+#        print("Greetings Detected")
+
+#text = "abc12345xyz"
+#count = 0
+#for char in text:
+#    if char.isdigit():
+#        count += 1
+#print(count)
+
+#text = "hello123!!!"
+#count = 0
+#for char in text:
+#    if char.isalpha():
+#        count += 1
+#print(count)
+
+#text = input("Password: ")
+#has_number = False #set flag
+#has_letter = False #set flag
+
+#Loop through text and find patterns or numbers and letters
+#for char in text:
+#    if char.isalpha():
+#        has_letter = True
+#    if char.isdigit():
+#        has_number = True
+
+#Set conditions. If password has a number and a letter at least or not.
+#if has_letter and has_number:
+#    print("Strong Password")
+#else:
+#    print("Weak Password")
+
+
+def main():
+    user_input = input("Write something: ")
+    analyze(user_input)
+
+def analyze(text):
+    letters = 0
+    numbers = 0
+    others = 0
+
+    for char in text:
+        if char.isalpha():
+            letters += 1
+        elif char.isdigit():
+            numbers += 1
+        else:
+            others += 1
+
+    print(f"Letters: {letters}")
+    print(f"Numbers: {numbers}")
+    print(f"Others: {others}")
+
+if __name__ == "__main__":
+    main()
