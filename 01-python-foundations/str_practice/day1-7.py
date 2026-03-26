@@ -345,6 +345,7 @@
 #for word in greetings:
 #    if word in text:
 #        print("Greetings Detected")
+#        break #stop checking once you find a match.
 
 #text = "abc12345xyz"
 #count = 0
@@ -376,28 +377,115 @@
 #    print("Strong Password")
 #else:
 #    print("Weak Password")
+#We can also finish this code with:
+#if has_letter and has_number:
+    #break #this stops the loop early and is more efficient.As per the question, if a digit and a letter have been detected stop the loop.
 
 
-def main():
-    user_input = input("Write something: ")
-    analyze(user_input)
+#def main():
+#    user_input = input("Write something: ")
+#    analyze(user_input)
 
-def analyze(text):
-    letters = 0
-    numbers = 0
-    others = 0
+#def analyze(text):
+#    letters = 0
+#    numbers = 0
+#    others = 0
 
-    for char in text:
-        if char.isalpha():
-            letters += 1
-        elif char.isdigit():
-            numbers += 1
-        else:
-            others += 1
+#    for char in text:
+#        if char.isalpha():
+#            letters += 1
+#        elif char.isdigit():
+#            numbers += 1
+#        else:
+#            others += 1
 
-    print(f"Letters: {letters}")
-    print(f"Numbers: {numbers}")
-    print(f"Others: {others}")
+#    print(f"Letters: {letters}")
+#    print(f"Numbers: {numbers}")
+#    print(f"Others: {others}")
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
+
+#Day 6: Real Problems (Combining everything: loops + conditions + strings + lists + logic)
+#Problem 1: Name formatter
+
+#text = ("   jOhN    doE   ").strip().lower()
+#separated_text = (text).split()
+#clean_text =" ".join(separated_text)
+#final_text = clean_text.title()
+#print(final_text)
+
+#The above code can be compressed to just a few lines of code like this
+text = "   jOhN     doE    "
+final_text = " ".join(text.strip().lower().split()).title()
+print(final_text)
+
+
+#Problem 2: Email Normalizer
+
+#email = ("   JohnDoe@GMAIL.com   ").strip().lower()
+#print(email)
+
+#Problem 3: Word Counter
+#text = ("Hello hello HELLO").lower()
+#count = 0
+#separated_text = text.split()
+#for word in separated_text:
+#    if word == "hello":
+#        count += 1
+#print(f"hello: {count}")
+
+#Problem 4: Password Validator (Advanced)
+#password = input("Password: ")
+
+#Flags
+#has_letter = False
+#has_number = False
+
+#Loop through the password to check for at least 1 number and at least 1 letter then break out of the loop
+#for char in password:
+#    if char.isalpha():
+#        has_letter = True
+#    if char.isdigit():
+#        has_number = True
+
+#Logic/ Conditions
+#if len(password) >= 8 and has_letter and has_number:
+#    print("Valid")
+#else: print("Invalid")
+
+#Problem 5: Clean and Analyze
+#def main():
+#    text = "   Hello!!! 123 WORLD!!!   "
+
+    #Fucntion calls to clean and analyze text
+#    clean = cleaned_text(text)
+#    letters, numbers = analyze_text(text)
+
+    #Print output of cleaning and analyzing text
+#    print(clean)
+#    print(f"Letters: {letters}")
+#    print(f"Numbers: {numbers}")
+
+#Define cleaned_text and analyze_text functions
+#def cleaned_text(t):
+#    t = t.strip().lower()
+#    clean_text = t.replace("!", "").replace("123", "")
+#    words = clean_text.split()
+#    return " ".join(words)
+
+#def analyze_text(text):
+#    letters = 0
+#    numbers = 0
+
+#    for char in text:
+#        if char.isalpha():
+#            letters += 1
+
+#        elif char.isdigit():
+#            numbers += 1
+    
+#    return letters, numbers
+
+#if __name__ == "__main__":
+#    main()
