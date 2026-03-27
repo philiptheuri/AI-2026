@@ -415,10 +415,10 @@
 #final_text = clean_text.title()
 #print(final_text)
 
-#The above code can be compressed to just a few lines of code like this
-text = "   jOhN     doE    "
-final_text = " ".join(text.strip().lower().split()).title()
-print(final_text)
+#The above code can be compressed to just a few lines of code like this. Chaining the Pythonic way
+#text = "   jOhN     doE    "
+#final_text = " ".join(text.strip().lower().split()).title()
+#print(final_text)
 
 
 #Problem 2: Email Normalizer
@@ -489,3 +489,32 @@ print(final_text)
 
 #if __name__ == "__main__":
 #    main()
+
+#Day 7: Building new data from pieces using lists and append()- add an item to the end of the list. We use append when we dont know
+#in advance how many items we'll have
+#Part 1
+#Create empty list
+#words = []
+#Add items to the list using append
+#words.append("Hello")
+#words.append("World")
+#print(words)
+
+#The camelCase problem. e.g. helloWorldPythonCode. Rules: First word-lowercase, Every next word- first letter uppercase, No spaces
+text = "hello world python code"
+#Break the text into pieces
+words = text.split()
+
+#Create a list to store the pieces
+new_words = []
+
+#Modify pieces
+for i, word in enumerate(words):
+    if i == 0:
+        new_words.append(word.lower())
+    else:
+        new_words.append(word.capitalize())
+
+#Join and print
+camel = "".join(new_words)
+print(camel)
